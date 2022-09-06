@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+        <div>
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <p>Total: {{total}}</p>
+                  </div>
+                  <div class="col-sm">
+                    <p>Cash: {{cash}}</p>
+                  </div>
+              </div>
+            </div>
+      </div>
+    </br>
+    </br>
+    </br>
+      <div>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>Portfolio</p>
+              </br>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>Symbol</p>
+              </div>
+              <div class="col-sm">
+                <p>Shares</p>
+              </div>
+              <div class="col-sm">
+                <p>Price</p>
+              </div>
+            </div>
+          </div>
+
+
+          {% for stock in stocks %}
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>{{stock}}</p>
+              </div>
+              <div class="col-sm">
+                <p>{{stocks[stock]}}</p>
+              </div>
+              <div class="col-sm">
+                <p>{{prices[stock]}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+    </div>
+
+
+{% endblock %}

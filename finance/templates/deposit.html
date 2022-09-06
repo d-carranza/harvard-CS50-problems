@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Buy
+{% endblock %}
+
+{% block main %}
+
+
+    <div class="container">
+        <div class="row">
+        <div class="col-sm">
+            <p>Cash:  ${{cash}}</p>
+        </div>
+    </div>
+</br>
+</br>
+</br>
+
+    <form action="/deposit" method="post">
+        <div class="container">
+            <div class="row">
+            <div class="col-sm">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="adress" name="adress" placeholder="Card number (fake)" type="text">
+            </br>
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="deposit" name="deposit" placeholder="Deposit cash amount" type="number">
+             </br>
+                <button class="btn btn-primary" type="submit">Deposit</button>
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

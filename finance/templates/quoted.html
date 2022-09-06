@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+
+        <div>
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <p>Name: {{token_name}}</p>
+                  </div>
+                  <div class="col-sm">
+                    <p>Price:{{token_price}}</p>
+                  </div>
+                  <div class="col-sm">
+                    <p>Symbol: {{token_symbol}}</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+{% endblock %}

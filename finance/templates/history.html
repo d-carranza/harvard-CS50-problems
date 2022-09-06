@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+
+      <div>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>{{name}}'s History</p>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>Symbol</p>
+              </div>
+              <div class="col-sm">
+                <p>Shares</p>
+              </div>
+              <div class="col-sm">
+                <p>Price</p>
+              </div>
+              <div class="col-sm">
+                <p>Type</p>
+              </div>
+            </div>
+          </div>
+
+
+          {% for row in history %}
+          <div class="container">
+            <div class="row">
+              <div class="col-sm">
+                <p>{{row["symbol"]}}</p>
+              </div>
+              <div class="col-sm">
+                <p>{{row["shares"]}}</p>
+              </div>
+              <div class="col-sm">
+                <p>${{row["price"]}}</p>
+              </div>
+              <div class="col-sm">
+                <p>{{row["type"]}}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+    </div>
+
+
+{% endblock %}
