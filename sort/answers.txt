@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: best performer in the best scenario
+
+sort2 uses: merge sort
+
+How do you know?: best performer in the worst scenario
+
+sort3 uses: selection sort
+
+How do you know?: not the fastest, but take similar time for best and worst scenario
