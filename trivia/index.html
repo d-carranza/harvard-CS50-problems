@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <!-- TODO: Add multiple choice question here -->
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>
+                    What is the number that comes after the CS in the CS50 course?
+                </h3>
+                <p id="result1"></p>
+                <div>
+                    <button type="button" id="btn1">20</button>
+                    <button type="button" id="btn2">100</button>
+                    <button type="button" id="btn3">50</button>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>
+                    What is the name of the greatest professor in the campus?
+                </h3>
+                <div>
+                    <form>
+                        <form action="/action_page.php">
+                            <p id="result2"></p>
+                            <input type="text" id="box">
+                            <button type="button" id="btn4">Submit</button>
+                          </form>
+                      </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            const btn1 = document.getElementById('btn1');
+            const btn2 = document.getElementById('btn2');
+            const btn3 = document.getElementById('btn3');
+            const result1 = document.getElementById('result1');
+
+            const btn4 = document.getElementById('btn4');
+            const box = document.getElementById('box');
+            const result2 = document.getElementById('result2');
+
+            //click button 1: incorrect
+            if(btn1){
+                btn1.addEventListener('click', function() {
+                btn1.style.backgroundColor = 'red';
+                result1.textContent = 'Incorrect';
+            }), false;
+            }
+
+            //click button 2: incorrect
+            if(btn2){
+                btn2.addEventListener('click', function(btn) {
+                btn2.style.backgroundColor = 'red'
+                result1.textContent = 'Incorrect';
+            });
+            }
+
+            //click button 3
+            if(btn3){
+                btn3.addEventListener('click', function() {
+                btn3.style.backgroundColor = 'green'
+                result1.value = 'Correct'
+                result1.textContent = 'Correct'
+            }, false);
+            }
+
+            if(btn3){
+                realAnswer = 'David J. Malan'
+                btn4.addEventListener('click', function() {
+                    //if text is same as real answer then box green
+                    if (box.value == realAnswer){
+                        box.style.backgroundColor = 'green';
+                        result2.textContent = 'Correct'
+                    }
+                    //is different as real answer then box red
+                    else {
+                        box.style.backgroundColor = 'red';
+                        result2.textContent = 'Inorrect'
+                    }
+                }
+            )}
+
+
+
+
+        </script>
+    </body>
+</html>
